@@ -4,3 +4,4 @@ Section: python
 Priority: optional
 Package: python-palantir
 Architecture: all
+Description: Logging for ros-comm
