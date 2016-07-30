@@ -1,7 +1,7 @@
-Version: 0.01
+Version: 0.1
 Maintainer: William Curran <curranw@onid.oregonstate.edu>
 Section: python
 Priority: optional
-Package: python-palantir
+Package: ros-indigo-palantir
 Architecture: all
 Description: Logging for ros-comm

@@ -1,6 +1,0 @@
-[submodule "palantir-0.01/opt/ros/hydro/palantir"]
-	path = palantir-0.01/opt/ros/hydro/palantir
-	url = ../palantir.git
-[submodule "palantir-0.01/opt/ros/palantir"]
-	path = palantir-0.01/opt/ros/palantir
-	url = ../palantir.git
