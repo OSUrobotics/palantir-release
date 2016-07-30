@@ -8,7 +8,7 @@ then
     mkdir /opt/ros/palantir && mkdir /opt/ros/palantir/src
     cd /opt/ros/palantir/src
     catkin_init_workspace
-    git clone -b hydro-devel https://github.com/OSUrobotics/palantir.git
+    git clone -b groovy-devel https://github.com/OSUrobotics/palantir.git
     cd /opt/ros/palantir
     catkin_make
 fi
