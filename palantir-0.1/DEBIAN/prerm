@@ -1,3 +1,4 @@
 #!/bin/bash
 echo "Removing palantir source"
 sed -i '/source \/opt\/ros\/palantir\/devel\/setup.bash/d' /etc/ros/setup.bash
+rm -rf /opt/ros/palantir
