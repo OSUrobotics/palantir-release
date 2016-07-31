@@ -1,0 +1,44 @@
+#!/bin/bash
+
+echo "ROSPalantir is an instrumented version of roscore, the central broker agent at the heart of a ROS system."
+
+echo "It allows live usage statistics on nodes and communications to be recorded, saved to disk, and sent back to an aggregating server at Oregon State University."
+
+read -r -p "Would you like you anonymously log usage statistics? (y/n) " input
+
+if [[ $input == "y" ]];
+then
+    echo "Thank you! What level of usage statistics would you like to log? (MAC and IP not currently logged)"
+    echo "1:IP Address, MAC Address, and all usage statistics"
+    echo "2: IP Address, and all usage statistics"
+    echo "3: Just all usage stistics"
+    read -r -p "Which level would you like? (1,2, or 3):  " level_input
+
+    if [[ $level_input != "1" ]] && [[ $level_input != "2" ]] && [[ $level_input != "3" ]];
+    then
+        echo "Input incorrect"
+        exit 1
+    fi
+    read -r -p "What would you like your user name to be? This is for looking up your own private data in the future:  " name_input
+
+    read -r -p "What would you like password to be? This is not encrypted, do not use a password that you use for important things:  " password_input
+
+    read -r -p "What is your username on your computer? (This is for setting up logging in /home/username/.ros/palantir_settings:  " account_input
+   
+    if [ ! -d /home/$account_input/.ros ];
+    then
+        echo "/home/$account_input/.ros does not exist"
+        exit 1
+    fi
+
+    echo "$level_input" > /home/$account_input/.ros/palantir_settings
+    echo "$name_input" >> /home/$account_input/.ros/palantir_settings
+    echo "$password_input" >> /home/$account_input/.ros/palantir_settings
+
+elif [[ $input == "n" ]];
+then
+    echo "Thank you! Not logging usage statistics"
+else
+    echo "Input incorrect"
+    exit 1
+fi
