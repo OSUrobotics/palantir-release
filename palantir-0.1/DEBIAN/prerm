@@ -2,3 +2,4 @@
 echo "Removing palantir source"
 sed -i '/source \/opt\/ros\/palantir\/devel\/setup.bash/d' /etc/ros/setup.bash
 rm -rf /opt/ros/palantir
+mv /usr/lib/robot/robot.py.bak /usr/lib/robot/robot.py

@@ -35,6 +35,8 @@ then
     echo "$name_input" >> /home/$account_input/.ros/palantir_settings
     echo "$password_input" >> /home/$account_input/.ros/palantir_settings
 
+    mv /usr/lib/robot/robot.py /usr/lib/robot/robot.py.bak
+
 elif [[ $input == "n" ]];
 then
     echo "Thank you! Not logging usage statistics"
