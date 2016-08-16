@@ -1,9 +1,10 @@
 Source: ros-hydro-palantir
-Version: 0.1
 Maintainer: William Curran <curranw@onid.oregonstate.edu>
 Section: python
-Priority: optional
+Priority: extra
+Standards-Version: 0.1
 
 Package: ros-hydro-palantir
-Architecture: all
+Architecture: any
 Description: Logging for ros-comm
+Provides: ros-hydro-palantir
